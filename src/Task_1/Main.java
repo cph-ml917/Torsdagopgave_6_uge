@@ -22,8 +22,21 @@ static int counter
 1.f Skriv en static metode i Main kaldet printCustomers(ArrayList customers), hvor du printer alle kunderne ud ved at gennemløbe customers med et for each loop. Test metoden fra main ved at kalde den med din ArrayList som argument.
 * */
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ArrayList<Customer> customerList = new ArrayList<Customer>();
+        customerList.add(new Customer("David", "Bowie", "Ziggy Stardust"));
+        customerList.add(new Customer("David Robert", "Jones", "Major Tom"));
+        customerList.add(new Customer("David", "Jones", "The Thin White Duke"));
+        printCustomers(customerList);
     }
+
+    public static void printCustomers(ArrayList<Customer> customerList) {
+        for (Customer customer : customerList) {
+            System.out.println(customer);
+        }
+    }
+
 }
