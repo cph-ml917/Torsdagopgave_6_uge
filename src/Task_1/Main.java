@@ -27,9 +27,21 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Customer> customerList = new ArrayList<Customer>();
+
+        //1.e - Instances on one line:
         customerList.add(new Customer("David", "Bowie", "Ziggy Stardust"));
         customerList.add(new Customer("David Robert", "Jones", "Major Tom"));
         customerList.add(new Customer("David", "Jones", "The Thin White Duke"));
+
+        /*1.e - Alternative solution:
+        Customer customerOne = new Customer("David", "Bowie", "Ziggy Stardust");
+        Customer customerTwo = new Customer("David Robert", "Jones", "Major Tom");
+        Customer customerThree = new Customer("David", "Jones", "The Thin White Duke");
+        customerList.add(customerOne);
+        customerList.add(customerTwo);
+        customerList.add(customerThree);
+        */
+        
         printCustomers(customerList);
     }
 
