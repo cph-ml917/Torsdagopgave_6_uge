@@ -7,6 +7,7 @@ public class Customer {
     private int id;
     private static int counter = 1;
 
+
     Customer(String firstName, String lastName, String userName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,6 +37,10 @@ public class Customer {
 
     public void setUserName() {
         this.userName = userName;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setId(int id) {
