@@ -1,5 +1,6 @@
 package Task_1;
 
+//1.a
 public class Customer {
     private String firstName;
     private String lastName;
@@ -7,7 +8,7 @@ public class Customer {
     private int id;
     private static int counter = 1;
 
-
+    //1.b + 1.c
     Customer(String firstName, String lastName, String userName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -15,6 +16,7 @@ public class Customer {
         this.id = counter++;
     }
 
+    //1.d
     public String getFirstName() {
         return firstName;
     }

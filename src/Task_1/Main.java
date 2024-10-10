@@ -24,6 +24,7 @@ static int counter
 
 import java.util.ArrayList;
 
+//1.e
 public class Main {
     public static void main(String[] args) {
         ArrayList<Customer> customerList = new ArrayList<Customer>();
@@ -41,7 +42,7 @@ public class Main {
         customerList.add(customerTwo);
         customerList.add(customerThree);
         */
-        
+
         printCustomers(customerList);
     }
 
