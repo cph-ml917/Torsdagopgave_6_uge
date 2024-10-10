@@ -35,8 +35,57 @@ Create methods countWindowsInBuilding() and countRoomsInBuilding(). Test in main
 
 package Task_3;
 
+import java.util.ArrayList;
+
+//3.h
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Room> rooms = new ArrayList<>();
 
+        //Instantiate four different rooms:
+        rooms.add(new Room(5, 6));
+        rooms.add(new Room(4, 3));
+        rooms.add(new Room(5, 3));
+        rooms.add(new Room(4, 4));
+
+        //3.i
+        Building thisBuilding = new Building(rooms,4);
+
+        int totalNumberOfLamps = countLampsInBuilding(thisBuilding);
+        System.out.println("Total number of lamps: " + totalNumberOfLamps);
+        int totalNumberOfWindows = countWindowsInBuilding(thisBuilding);
+        System.out.println("Total number of windows: " + totalNumberOfWindows);
+
+        int totalRooms = countRoomsInBuilding(thisBuilding);
+        System.out.println("Total number of rooms: " + totalRooms);
+
+        boolean isNormal = isNormal(thisBuilding);
+        System.out.println("\"The building's number of floors is greater than or equal to it's number of rooms.\": " + isNormal);
+    }
+
+    //3.j
+    public static int countLampsInBuilding(Building building){
+        int totalNumberOfLamps = 0;
+        for(Room room : building.getRooms()){
+            totalNumberOfLamps += room.getNumberOfLamps();
+        }
+        return totalNumberOfLamps;
+    }
+
+    public static int countWindowsInBuilding(Building building){
+        int totalNumberOfWindows = 0;
+        for(Room room : building.getRooms()){
+            totalNumberOfWindows += room.getNumberOfWindows();
+        }
+        return totalNumberOfWindows;
+    }
+
+    public static int countRoomsInBuilding(Building building){
+        return building.getRooms().size();
+    }
+
+    //3.k
+    public static boolean isNormal(Building building){
+        return building.getNumberOfFloors() >= building.getRooms().size();
     }
 }
