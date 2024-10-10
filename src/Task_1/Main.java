@@ -1,5 +1,3 @@
-package Task_1;
-
 //----------Task 1: ArrayList og objekter----------//
 
 /*
@@ -22,6 +20,8 @@ static int counter
 1.f Skriv en static metode i Main kaldet printCustomers(ArrayList customers), hvor du printer alle kunderne ud ved at gennemløbe customers med et for each loop. Test metoden fra main ved at kalde den med din ArrayList som argument.
 * */
 
+package Task_1;
+
 import java.util.ArrayList;
 
 //1.e
@@ -34,7 +34,7 @@ public class Main {
         customerList.add(new Customer("David Robert", "Jones", "Major Tom"));
         customerList.add(new Customer("David", "Jones", "The Thin White Duke"));
 
-        /*1.e - Alternative solution:
+        /*1.e - Alternative solution: Set up the instances and add them to the list
         Customer customerOne = new Customer("David", "Bowie", "Ziggy Stardust");
         Customer customerTwo = new Customer("David Robert", "Jones", "Major Tom");
         Customer customerThree = new Customer("David", "Jones", "The Thin White Duke");
