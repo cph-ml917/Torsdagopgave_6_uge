@@ -49,7 +49,4 @@ public class Main {
         //2.h
         System.out.println(myCafe);
     }
-
-
-
 }
